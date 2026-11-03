@@ -1,0 +1,7 @@
+{
+  "appId": "br.com.badmintontraining.app",
+  "appName": "Badminton Training",
+  "webDir": "web",
+  "backgroundColor": "#0e1411",
+  "android": { "allowMixedContent": false }
+}
