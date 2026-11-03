@@ -1,0 +1,32 @@
+/* ---------- Quadra ---------- */
+.court-wrap { display: flex; justify-content: center; }
+.court { width: 100%; max-width: 330px; height: auto; user-select: none; -webkit-user-select: none; }
+.court .floor { fill: var(--court); }
+.court .lines * { fill: none; stroke: var(--court-line); stroke-width: 2; opacity: .8; }
+.court .net { stroke: #fff; stroke-width: 5; stroke-linecap: round; }
+.court .net-label { fill: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .25em; text-anchor: middle; }
+.court .base { fill: rgba(0, 0, 0, .2); stroke: var(--accent); stroke-width: 2; stroke-dasharray: 3 3; opacity: .8; }
+.court .pos { transform-box: fill-box; transform-origin: center; }
+.court .pos circle {
+  fill: rgba(0, 0, 0, .28); stroke: rgba(255, 255, 255, .35); stroke-width: 2; stroke-dasharray: 4 4;
+  transition: fill .15s, stroke .15s;
+}
+.court .pos text {
+  fill: rgba(255, 255, 255, .45); font-size: 17px; font-weight: 800; text-anchor: middle; dominant-baseline: central;
+  pointer-events: none;
+}
+.court .pos.on circle { fill: color-mix(in srgb, var(--accent) 18%, transparent); stroke: var(--accent); stroke-dasharray: none; }
+.court .pos.on text { fill: var(--accent); }
+.court .pos.hit circle { fill: var(--accent); stroke: #fff; stroke-width: 3; }
+.court .pos.hit text { fill: var(--accent-ink); }
+.court .pos.hit { animation: pop .45s ease-out; }
+.court.interactive .pos { cursor: pointer; }
+.court.interactive .pos:focus { outline: none; }
+.court.interactive .pos:focus-visible circle { stroke: #fff; stroke-width: 3; }
+.court .runner { fill: #fff; stroke: var(--bg); stroke-width: 2.5; transition: transform .45s cubic-bezier(.3, .7, .3, 1); }
+.court .path { stroke: var(--accent); stroke-width: 2.5; stroke-dasharray: 5 6; opacity: 0; transition: opacity .2s; }
+.court .path.show { opacity: .85; }
+@keyframes pop { 0% { transform: scale(.7); } 60% { transform: scale(1.15); } 100% { transform: scale(1); } }
+
+.court-mini { display: flex; justify-content: center; margin: 4px 0; }
+.court-mini .court { max-width: 200px; }
