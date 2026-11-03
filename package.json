@@ -1,0 +1,21 @@
+{
+  "name": "badminton-training",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Badminton Training — app de treino de badminton (web + Android via Capacitor)",
+  "scripts": {
+    "dev": "python3 -m http.server 5173 --directory web",
+    "sync": "npx cap sync android",
+    "apk": "npm run sync && cd android && JAVA_HOME=${JAVA_HOME_21:-$HOME/android-studio/jbr} ./gradlew assembleDebug && cp app/build/outputs/apk/debug/app-debug.apk ../badminton-training.apk"
+  },
+  "dependencies": {
+    "@capacitor-community/keep-awake": "^7.1.0",
+    "@capacitor-community/text-to-speech": "^6.1.0",
+    "@capacitor/android": "^7.6.10",
+    "@capacitor/core": "^7.6.10",
+    "@capacitor/haptics": "^7.0.5"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.6.10"
+  }
+}
