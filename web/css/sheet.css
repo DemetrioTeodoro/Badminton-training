@@ -1,0 +1,22 @@
+/* ---------- Bottom sheet ---------- */
+.sheet { position: fixed; inset: 0; z-index: 30; display: flex; align-items: flex-end; justify-content: center; }
+.sheet-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, .6); animation: fade .2s; }
+.sheet-panel {
+  position: relative; width: 100%; max-width: 640px; max-height: 90vh; overflow-y: auto;
+  background: var(--surface); border: 1px solid var(--line); border-bottom: 0; border-radius: 22px 22px 0 0;
+  padding: 22px 18px calc(22px + env(safe-area-inset-bottom)); animation: up .25s cubic-bezier(.2, .8, .3, 1);
+}
+.sheet-x { position: absolute; top: 12px; right: 12px; }
+.sheet-head { padding-right: 40px; }
+.sheet-head h2 { margin: 10px 0 6px; font-size: 1.45rem; letter-spacing: -.01em; }
+.sheet-head p { color: var(--muted); margin: 0 0 14px; line-height: 1.45; }
+.sheet-panel h3 { margin-top: 18px; }
+.presc { display: flex; gap: 10px; margin: 12px 0; }
+.presc > div { flex: 1; background: var(--surface-2); border-radius: 12px; padding: 10px 12px; }
+.presc small { display: block; color: var(--muted); font-size: .75rem; }
+.presc b { font-size: 1rem; }
+.steps, .tips { margin: 0; padding-left: 22px; line-height: 1.5; }
+.steps li, .tips li { margin-bottom: 6px; }
+.tips li::marker { color: var(--accent); }
+@keyframes up { from { transform: translateY(40px); opacity: 0; } }
+@keyframes fade { from { opacity: 0; } }
