@@ -1,0 +1,20 @@
+{
+  "name": "Badminton Training",
+  "short_name": "Badminton",
+  "description": "Exercícios, treinos guiados e shadow footwork para badminton.",
+  "lang": "pt-BR",
+  "start_url": "./#shadow",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0e1411",
+  "theme_color": "#0e1411",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
