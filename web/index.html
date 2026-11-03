@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e1411">
+  <meta name="description" content="Treino de badminton: exercícios, treinos guiados e shadow footwork com chamadas por voz.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Badminton">
+  <title>Badminton Training</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/controls.css">
+  <link rel="stylesheet" href="css/court.css">
+  <link rel="stylesheet" href="css/lists.css">
+  <link rel="stylesheet" href="css/sheet.css">
+  <link rel="stylesheet" href="css/player.css">
+  <link rel="stylesheet" href="css/toast.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand"><img src="assets/icon.svg" alt="" width="30" height="30"><span>Badminton<b>Training</b></span></div>
+    <button class="icon-btn" id="btnSettings" aria-label="Configurações">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>
+    </button>
+  </header>
+
+  <main id="view"></main>
+
+  <nav class="tabbar" id="tabbar" aria-label="Navegação">
+    <a href="#shadow" data-tab="shadow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 1.5v4M12 18.5v4M1.5 12h4M18.5 12h4"/></svg>
+      <span>Shadow</span>
+    </a>
+    <a href="#exercicios" data-tab="exercicios">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2"/><circle cx="4.5" cy="12" r="1.2"/><circle cx="4.5" cy="18" r="1.2"/></svg>
+      <span>Exercícios</span>
+    </a>
+    <a href="#treinos" data-tab="treinos">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6.5 7v10M3.5 9.5v5M17.5 7v10M20.5 9.5v5M6.5 12h11"/></svg>
+      <span>Treinos</span>
+    </a>
+    <a href="#historico" data-tab="historico">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 20V11M11 20V5M17 20v-6M2.5 20.5h19"/></svg>
+      <span>Histórico</span>
+    </a>
+  </nav>
+
+  <div id="player" class="player" hidden></div>
+  <div id="sheet" class="sheet" hidden></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
